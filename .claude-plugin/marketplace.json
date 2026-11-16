@@ -1,0 +1,25 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "my-workstyle-marketplace",
+  "description": "Personal Claude Code marketplace: the workstyle autonomous SDLC plugin plus a pinned ponytail.",
+  "owner": {
+    "name": "L104660"
+  },
+  "plugins": [
+    {
+      "name": "workstyle",
+      "description": "Autonomous, stack-agnostic SDLC pipeline with hook-enforced gates; runs headless.",
+      "source": "./plugins/workstyle"
+    },
+    {
+      "name": "ponytail",
+      "description": "Third-party YAGNI/reuse-first coding ruleset (DietrichGebert/ponytail), pinned to the reviewed commit. Re-review before changing the sha.",
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail",
+        "ref": "main",
+        "sha": "09c434ab73ca43761c5d8b0c5d341926c2fba710"
+      }
+    }
+  ]
+}

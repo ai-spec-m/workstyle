@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: headless-python-feature
+description: An unattended run on a tiny non-JS repo must enter the pipeline, arm the gates and end `state: done`.
+tags: [smoke]
+context:
+  scaffold_script: fixture.sh

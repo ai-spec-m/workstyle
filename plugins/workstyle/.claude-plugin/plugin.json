@@ -1,0 +1,9 @@
+{
+  "name": "workstyle",
+  "description": "Autonomous, stack-agnostic SDLC pipeline: per-repo setup that detects the repo's own gate commands, then a headless-safe research -> story -> spec -> build -> test -> validate -> draft-PR run with hook-enforced gates and a truthful exit code.",
+  "version": "0.14.0",
+  "author": {
+    "name": "L104660"
+  },
+  "license": "MIT"
+}

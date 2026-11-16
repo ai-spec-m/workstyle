@@ -1,0 +1,16 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  validate-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install -y jq
+      - run: npm i -g @anthropic-ai/claude-code
+      - run: claude plugin validate . --strict
+      - run: claude plugin validate plugins/workstyle --strict
+      - run: bash plugins/workstyle/scripts/gates.test.sh
+      - run: bash plugins/workstyle/scripts/git-add-guard.test.sh
+      - run: bash plugins/workstyle/scripts/edit-guards.test.sh
+      - run: bash plugins/workstyle/scripts/factory-run.test.sh
+      - run: bash -n plugins/workstyle/scripts/*.sh
